@@ -1,0 +1,86 @@
+#!/bin/bash
+
+# Menú
+OPCIONES="Opción_1 Opción_2 Opción_3 Opción_4 Opción_5 Opción_6 Salir"
+
+while true; do
+    echo "Seleccione una opción:"
+    select opt in $OPCIONES; do
+        case $opt in
+            Opción_1)
+                # Solicita el parámetro
+                read -p "Ingrese el parámetro para Opción_1: " PARAM
+                # Verifica si se ingresó un parámetro
+                if [ -z "$PARAM" ]; then
+                    echo "No se ingresó ningún parámetro."
+                else
+                    ./prac4-1.sh "$PARAM"
+                fi
+                break
+                ;;
+            Opción_2)
+                # Solicita el parámetro
+                read -p "Ingrese el parámetro para Opción_2: " PARAM
+                # Verifica si se ingresó un parámetro
+                if [ -z "$PARAM" ]; then
+                    echo "No se ingresó ningún parámetro."
+                else
+                    ./practico2-2.sh "$PARAM"
+                fi
+                break
+                ;;
+            Opción_3)
+                # Solicita el parámetro
+                read -p "Ingrese el parámetro para Opción_3: " PARAM
+                # Verifica si se ingresó un parámetro
+                if [ -z "$PARAM" ]; then
+                    echo "No se ingresó ningún parámetro."
+                else
+                    ./practico2-3.sh "$PARAM"
+                fi
+                break
+                ;;
+            Opción_4)
+                # Solicita el parámetro
+                read -p "Ingrese el parámetro para Opción_4: " PARAM
+                # Verifica si se ingresó un parámetro
+                if [ -z "$PARAM" ]; then
+                    echo "No se ingresó ningún parámetro."
+                else
+                    ./practico2-4.sh "$PARAM"
+                fi
+                break
+                ;;
+            Opción_5)
+                # Solicita el parámetro
+                read -p "Ingrese el parámetro para Opción_5: " PARAM
+                # Verifica si se ingresó un parámetro
+                if [ -z "$PARAM" ]; then
+                    echo "No se ingresó ningún parámetro."
+                else
+                    ./practico2-5.sh "$PARAM"
+                fi
+                break
+                ;;
+            Opción_6)
+                # Solicita el parámetro
+                read -p "Ingrese el parámetro para Opción_6: " PARAM
+                # Verifica si se ingresó un parámetro
+                if [ -z "$PARAM" ]; then
+                    echo "No se ingresó ningún parámetro."
+                else
+                    ./practico2-6.sh "$PARAM"
+                fi
+                break
+                ;;
+            Salir)
+                echo "Saliendo..."
+                exit 0
+                ;;
+            *)
+                echo "Opción no válida."
+                break
+                ;;
+        esac
+    done
+done
